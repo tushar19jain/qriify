@@ -1,0 +1,37 @@
+
+h4{
+    display: none;
+}
+
+@media screen and (min-width:320px) and (max-width: 475px) {
+
+    h4{
+        display: block;
+    }
+    .openMenu h4{
+        font-size: 30px;
+        color: rgb(2 6 23);;
+    }
+    .openMenu{
+        width: 360px;
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: absolute;
+        top: 40px;
+        background: #fff;
+        color: black;
+        box-shadow: 2px 2px 16px #b4b4b446;
+        padding: 15px 15px;
+        position: absolute;
+        z-index: 2;
+        height: 1200px;
+        font-size: 23px;
+    }
+    .openMenu a{
+        color: black;
+        text-decoration: none;
+    }
+    
+}

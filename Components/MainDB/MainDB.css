@@ -1,0 +1,130 @@
+.Qrarea{
+    width: max-content;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 19px  lightgray ;
+    background-color: #fff;
+    filter: drop-shadow(1200px);
+}
+.QrArea{
+    background-color: transparent;
+    padding: 80px 80px;
+}
+.main{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+.Qrsettings{
+    display: flex;
+    flex-direction: column;
+    padding: 40px 40px;
+    text-align: left;
+    font-size: 11px;
+}
+.Qrsettings input{
+    padding: 12px 10px;
+}
+.Qrsettings button{
+    padding: 7px 7px;
+    margin: 10px 10px;
+    color: transparent;
+    border: 1px solid lightgray;
+    color: black;
+    width: 80px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.formatBtn{
+    display: flex;
+}
+.formatBtn button{
+    border-radius: 10px;
+    color: white;
+    background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);
+    border: none;
+    box-shadow: 1px 1px 3px #121212;
+}
+.redundancyBtn button{
+    border-radius: 10px;
+    background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);
+    color: white;
+    font-size: 15px;
+}
+.star{
+    color: gold;
+    font-size: 23px;
+    position: relative;
+    left: -45px;
+    top: 2px;
+    filter: drop-shadow(2px 2px 18px goldenrod );
+}
+.starAdvance{
+    color: gold;
+    font-size: 23px;
+    position: relative;
+    left: -25px;
+    top: 2px;
+    filter: drop-shadow(2px 2px 18px goldenrod );
+}
+.toogleoff{
+    font-size: 16px;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 120px;
+    display: flex;
+    gap: 10px;
+}
+.star2{
+    color: gold;
+    font-size: 23px;
+    position: relative;
+    left: -125px;
+    top: 2px;
+    filter: drop-shadow(2px 2px 18px goldenrod );
+}
+img .QRimg:hover{
+    filter: blur(200px);
+}
+@media screen and (min-width:320px) and (max-width: 475px){
+    .main{
+        flex-direction: column;
+    }
+    .Qrarea{
+        padding: 80px 80px;
+    }
+    .formatBtn{
+        flex-direction: row;
+        flex-wrap: wrap
+    }
+    .formatBtn button{
+        font-size: 14px;
+        padding: 6px;
+    }
+    .redundancyBtn button{
+        font-size: 16px;
+        padding: 6px;
+    }
+    .Qrarea{
+        position: sticky;
+        top: 0;
+        padding: 20px 20px;
+        z-index: 1;
+    }
+    .star2{
+      top: -50px;
+      left: 75px;
+    }
+    .toogleoff{
+        top: 105px;
+    }
+    .warning{
+        width: 70px;
+        font-size: 8px;
+    }
+    .highTag{
+        top: 1600px;
+    }
+}
