@@ -19,12 +19,30 @@
 .Qrsettings{
     display: flex;
     flex-direction: column;
-    padding: 40px 40px;
+    width: 650px;
+    padding: 25px 25px;
     text-align: left;
     font-size: 11px;
+    background: rgba(235, 233, 233, 0.263);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.9px);
+    -webkit-backdrop-filter: blur(5.9px);
+    margin: 12px 14px;
+    border-radius: 13px;
+    -webkit-box-shadow: 4.5px -0.5px 21px -2px #dddddd;
+-moz-box-shadow: 4.5px -0.5px 21px -2px #dddddd;
+box-shadow: 4.5px -0.5px 21px -2px #dddddd;
 }
 .Qrsettings input{
     padding: 12px 10px;
+    border: none;
+    transition: 0.2s ease;
+    border-radius: 12px;
+}
+.Qrsettings input:hover{
+    border: 2px solid blueviolet;
+    filter: drop-shadow(rgba(17, 12, 46, 0.15) 0px 48px 100px 0px);
 }
 .Qrsettings button{
     padding: 7px 7px;
@@ -74,6 +92,7 @@
     cursor: pointer;
     position: absolute;
     top: 120px;
+    left: 350px;
     display: flex;
     gap: 10px;
 }
@@ -87,6 +106,20 @@
 }
 img .QRimg:hover{
     filter: blur(200px);
+}
+.BarcodeBtn{
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    padding: 12px 13px;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    font-weight: 600;
+    position: absolute;
+    top: 107px;
+    left: 800px;
+    cursor: pointer;
 }
 @media screen and (min-width:320px) and (max-width: 475px){
     .main{
@@ -118,7 +151,8 @@ img .QRimg:hover{
       left: 75px;
     }
     .toogleoff{
-        top: 105px;
+        top: 75px;
+        left: 110px;
     }
     .warning{
         width: 70px;
@@ -126,5 +160,14 @@ img .QRimg:hover{
     }
     .highTag{
         top: 1600px;
+    }
+    .Qrsettings{
+        margin-top: 70px;
+        width: 330px;
+    }
+    .BarcodeBtn{
+        position: static;
+        margin-top: 30px;
+        border-radius: 12px;
     }
 }

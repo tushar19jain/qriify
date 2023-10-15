@@ -1,6 +1,7 @@
 "use client"
 import { useState } from 'react'
 import { saveAs } from 'file-saver';
+import Link from 'next/link';
 import './MainDB.css'
 import { FaStar, FaToggleOff, FaToggleOn } from 'react-icons/fa6';
 const MainDB=()=>{
@@ -64,6 +65,7 @@ return(
                <img onLoad ={handleImageUrl} download={'Qrify'} id='qrCode'src={`https://api.qrserver.com/v1/create-qr-code/?format=${format}&bgcolor=${bgcolor}&color=${Color}&size=${size}x${size}&data=${qrData}&margin=${margin}&ecc=${redundancy}`}></img>
                <button className='downlodeBtn' onClick={downloadImg} style={{backgroundColor:"teal", color:"white" ,borderRadius:"5px", padding:"11px 12px",fontSize:'12px',width:"180px", fontWeight:"bold",border:'none'}}>DOWNLODE</button>
             </div>
+            <Link href='/Barcode'><button className='BarcodeBtn'>Create Barcode (New update!🔥)</button></Link>
             <div className='Qrsettings'>
                 <h1>QR Settings</h1>
                 <br></br>
@@ -109,10 +111,11 @@ return(
         :
         <div className='main'>
            <p  className='toogleoff'>Image version <FaToggleOn onClick={()=>{setToggle(!toggle)}} style={{fontSize:'30px'}} className='toggle'/></p> 
-            <div style={{display:'flex',flexDirection:'column',justifyContent:'center'}} className='Qrarea'>
+           <div style={{display:'flex',flexDirection:'column',justifyContent:'center'}} className='Qrarea'>
                <img onLoad ={handleImageUrl} id='qrCode'src={`https://quickchart.io/qr?centerImageHeight=${imageSize}&centerImageWidth=${imageSize}&centerImageUrl=${middleImage}&text=${qrData}&format=${format}&size=${size}`}></img>
                <button onClick={downloadImg} style={{backgroundColor:"teal",color:"white" ,borderRadius:"5px", padding:"12px 13px", width:"180px",fontWeight:"bold",border:'none'}}>DOWNLODE</button>
             </div>
+             <Link href='/Barcode'><button className='BarcodeBtn'>Create Barcode (New update!🔥)</button></Link>
             <div className='Qrsettings'>
                 <h1>QR Settings</h1>
                 <br></br>
